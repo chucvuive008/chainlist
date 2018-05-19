@@ -41,9 +41,11 @@
       <div class="row panel panel-default">
         <div class="panel-heading clearfix">
           <div class="panel-title">
+            <button class="btn btn-info btn-lg pull-left" data-toggle="collapse" data-target="#events" aria-expanded="false" aria-controls="events">Event</button>
             <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle">Sell an article</button>
           </div>
         </div>
+        <ul id="events" class="collapse list-group"></ul>
       </div>
 
       <div id="articlesRow" class="row">
@@ -100,7 +102,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="">Submit</button>
+          <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.sellArticle(); return false;">Submit</button>
           <button type="button" class="btn" data-dismiss="modal">Close</button>
         </div>
       </div>
