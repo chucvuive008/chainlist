@@ -155,11 +155,13 @@ App = {
      buyArticle: function() {
            event.preventDefault();
 
+           var _articleId = $(event.target).data('id');
+
            //retrieve the article price
            var _price = parseFloat($(event.target).data('value'));
 
            App.contracts.ChainList.deployed().then(function(instance) {
-                 return instance.buyArticle({
+                 return instance.buyArticle(_articleId, {
                        from: App.account,
                        value: web3.toWei(_price, "ether"),
                        gas: 500000
